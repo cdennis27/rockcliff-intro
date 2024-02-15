@@ -1,0 +1,71 @@
+
+
+
+.car-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    border: 1px solid #cf03ef;
+}
+
+.car-image {
+      width: 450px;
+    border-bottom: 1px solid #06fc0e;
+}
+  .slidesContainer {
+    display: flex;
+    border: rgb(62, 9, 234) 1px solid;
+    width: 450px;
+    height: 350px;
+    overflow: hidden;
+  }
+  .slides {
+    display: flex;
+    height: 100%;
+  }
+  .slide {
+    min-width: 100%;
+    position: relative;
+    border: orange 0px solid;
+  }
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+  .slide-controls {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #next-btn,
+  #prev-btn {
+    cursor: pointer;
+    background: transparent;
+    font-size: 30px;
+    border: none;
+    padding: 10px;
+    color: rgb(255, 255, 0);
+  }
+  #next-btn:focus,
+  #prev-btn:focus {
+    outline: none;
+  }
+  .slide-content {
+    position: absolute;
+    bottom: 0px;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    border:#06fc0e 0px solid;
+    background:rgb(255, 255, 0);
+    padding: 3px 10px 3px 10px;
+  }
+
+  
