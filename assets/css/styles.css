@@ -62,7 +62,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  margin: 20px;
+  margin: 5px 20px 5px 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
 }
@@ -250,9 +250,9 @@ button:hover {
 @media screen and (max-width: 1020px) {
 
   .header {
-    height: 80px;
+    height: 70px;
     width: 100%;
-    overflow-x: hidden;
+    
   }
 
   .header img {
@@ -287,6 +287,31 @@ button:hover {
   .footer p {
     padding: 5px 0 5px 0;
 
+  }
+
+}
+
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+
+    padding: 10px 20px;
+    height: 50px;
+  }
+
+  .header img {
+    width: auto;
+    height: 50px;
+    padding: 0px;
+    object-fit: cover;
+  }
+
+  .container {
+    border:rgb(0, 173, 0) 0px solid;
   }
 
 }
