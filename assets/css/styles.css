@@ -1,284 +1,292 @@
-:root {
-
-}
+:root {}
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+
 }
 
 html {
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
-    scroll-behavior: smooth;
-    display: inline-block;
-    width: 100%;
-    
-    margin: 0;
-    padding: 0 0 0 0;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+  display: inline-block;
+  width: 100%;
+
+  margin: 0;
+  padding: 0 0 0 0;
 }
 
 a {
-    text-decoration: none;
-    color: #000000;
+  text-decoration: none;
+  color: #000000;
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 20vh;
-    background-color: #000000;
-    width: 100%;
-    color: yellow;
-    text-align: center;
-    font-size: 1rem;
-    line-height: normal;
-    padding: 10px 0 10px 0;
-    margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 20vh;
+  background-color: #000000;
+  width: 100%;
+  color: yellow;
+  text-align: center;
+  font-size: 1rem;
+  line-height: normal;
+  padding: 10px 0 10px 0;
+  margin: 0;
 }
 
 .header img {
-    width: auto;
-    height: 100px;
-    padding: 5px;
-    object-fit: cover;
+  width: auto;
+  height: 100px;
+  padding: 5px;
+  object-fit: cover;
 
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    height: auto;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+
+
+.car-card {
+  display: flex;
+  flex-direction: column;
+
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.car-image {
+  flex: 1;
+  overflow: hidden;
+  border: red 1px solid;
+}
+
+.image-slide {
+  display: flex;
+  width: 300%;
+  /* Set the width to accommodate 3 images */
+}
+
+.image-slide img {
+  width: calc(100% / 3);
+  /* Distribute images evenly */
+  height: auto;
+}
+
+.car-details {
+  flex: 1;
+  padding: 20px;
+}
+
+.car-details h2 {
+  margin-top: 0;
+}
+
+.car-details p {
+  margin: 5px 0;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@keyframes slide {
+
+  33.33%,
+  66.66% {
+    transform: translateX(0);
   }
 
-  
-  .car-card {
-    display: flex;
-    flex-direction: column;
-    
-    margin: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+  66.66%,
+  33.33% {
+    transform: translateX(-33.33%);
   }
-  
-  .car-image {
-    flex: 1;
-    overflow: hidden;
-    border: red 1px solid;
+
+  100% {
+    transform: translateX(-66.66%);
   }
-  
-  .image-slide {
-    display: flex;
-    width: 300%; /* Set the width to accommodate 3 images */
-  }
-  
-  .image-slide img {
-    width: calc(100% / 3); /* Distribute images evenly */
-    height: auto;
-  }
-  
-  .car-details {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  .car-details h2 {
-    margin-top: 0;
-  }
-  
-  .car-details p {
-    margin: 5px 0;
-  }
-  
-  button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  @keyframes slide {
-    33.33%, 66.66% { transform: translateX(0); }
-    66.66%, 33.33% { transform: translateX(-33.33%); }
-    100% { transform: translateX(-66.66%); }
-    
-  }
-  .image-slide {
-    animation: slide 15s infinite linear alternate;
-  }
+
+}
+
+.image-slide {
+  animation: slide 15s infinite linear alternate;
+}
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 0px;
-    height: auto;
-    background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 0px;
+  height: auto;
+  background-color: white;
 }
 
 .button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 80px;
-    background-color: #000000;
-    width: 50vw;
-    color: yellow;
-    text-align: center;
-    font-size: 1.5rem;
-    line-height: normal;
-    padding: 10px 20px 10px 20px;
-    margin: 20px 0 20px 0;
-    border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 80px;
+  background-color: #000000;
+  width: 50vw;
+  color: yellow;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: normal;
+  padding: 10px 20px 10px 20px;
+  margin: 20px 0 20px 0;
+  border-radius: 20px;
 }
 
 .buttonAccent {
-    background-color: rgb(56, 224, 0);
-    color: black;
+  background-color: rgb(56, 224, 0);
+  color: black;
 }
 
 .buttonAccent:hover {
-    background-color: rgb(0, 173, 0);
-    border-color: black;
-    border: 0px solid black;
-    color: black;
+  background-color: rgb(0, 173, 0);
+  border-color: black;
+  border: 0px solid black;
+  color: black;
 }
 
 .disclamer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    text-align: left;
-    font-size: 1rem;
-    line-height: normal;
-    padding: 10px 100px 10px 100px;
-    margin: 0;
-    text-indent: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  line-height: normal;
+  padding: 10px 100px 10px 100px;
+  margin: 0;
+  text-indent: 20px;
 
 }
 
 
 
 .footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    height: 15vh;
-    background-color: #000000;
-    width: 100%;
-    color: yellow;
-    text-align: center;
-    font-size: 1rem;
-    line-height: normal;
-    padding: 10px 0 10px 0;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  height: 15vh;
+  background-color: #000000;
+  width: 100%;
+  color: yellow;
+  text-align: center;
+  font-size: 1rem;
+  line-height: normal;
+  padding: 10px 0 10px 0;
+  margin: 0;
 }
 
 .footer a {
-    
-    padding: 10px 0 10px 0;
+
+  padding: 10px 0 10px 0;
 }
 
 .callFooter {
-    color: yellow;
+  color: yellow;
 }
 
 .address {
-    color: white;
+  color: white;
 }
 
 .footer a:hover {
-    color: orangered;
+  color: orangered;
 }
 
 .caps {
-    text-transform: uppercase;
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: lowercase;
+  text-transform: capitalize;
+
 }
 
 .legal {
-    color: rgb(0, 174, 213);
-    font-size: .6rem;
-    height: 1rem;
-    position: relative;
-    top: 0px;
-    border: lightblue 1px solid;
+  color: rgb(0, 174, 213);
+  font-size: .6rem;
+  height: 1rem;
+  position: relative;
+  top: 0px;
+  border: lightblue 1px solid;
 }
 
 @media screen and (max-width: 1020px) {
-    
-    .header {
-        height: 80px;
-        width: 100%;
-        overflow-x: hidden;
-    }
 
-    .header img {
-        width: auto;
-        height: 50px;
-        padding: 5px;
-        object-fit: cover;
-    }
+  .header {
+    height: 80px;
+    width: 100%;
+    overflow-x: hidden;
+  }
 
-    .container {
-        height: auto;
-    }
+  .header img {
+    width: auto;
+    height: 50px;
+    padding: 5px;
+    object-fit: cover;
+  }
 
-    .button {
-        margin: 10px 0 10px 0;
-        width: 80vw;
-        height: 50px;
-    }
-    
-    .disclamer {
-        padding: 10px 10px 20px 10px;
-        
-        font-size: .7rem;
-    }
+  .container {
+    height: auto;
+  }
 
-    .footer {
-        padding: 5px 0 5px 0;
-        height: 100px;
-        font-size: 80%;
-    }
+  .button {
+    margin: 10px 0 10px 0;
+    width: 80vw;
+    height: 50px;
+  }
 
-    .footer p {
-        padding: 5px 0 5px 0;
-        
-    }
+  .disclamer {
+    padding: 10px 10px 20px 10px;
+
+    font-size: .7rem;
+  }
+
+  .footer {
+    padding: 5px 0 5px 0;
+    height: 100px;
+    font-size: 80%;
+  }
+
+  .footer p {
+    padding: 5px 0 5px 0;
+
+  }
 
 }
-
-
-
-
-
-
-
-
-
-
-
