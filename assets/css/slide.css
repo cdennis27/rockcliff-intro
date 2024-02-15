@@ -1,39 +1,44 @@
-
-
-
 .car-card {
     position: relative;
     display: flex;
     flex-direction: column;
-    
+
     border: 1px solid #cf03ef;
 }
 
 .car-image {
-      width: 450px;
+    width: 450px;
     border-bottom: 1px solid #06fc0e;
 }
-  .slidesContainer {
+
+.slidesContainer {
     display: flex;
     border: rgb(62, 9, 234) 1px solid;
     width: 450px;
-    height: 350px;
+    height: 550px;
     overflow: hidden;
-  }
-  .slides {
+}
+
+.slides {
     display: flex;
     height: 100%;
-  }
-  .slide {
+    border: blue 1px solid;
+
+}
+
+.slide {
     min-width: 100%;
     position: relative;
     border: orange 0px solid;
-  }
-  .slide img {
+
+}
+
+.slide img {
     width: 100%;
     height: auto;
-  }
-  .slide-controls {
+}
+
+.slide-controls {
     position: absolute;
     top: 25%;
     left: 0;
@@ -42,79 +47,194 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  #next-btn,
-  #prev-btn {
+}
+
+#next-btn,
+#prev-btn {
     cursor: pointer;
     background: transparent;
     font-size: 30px;
     border: none;
     padding: 10px;
     color: rgb(255, 255, 0);
-  }
-  #next-btn:focus,
-  #prev-btn:focus {
+}
+
+#next-btn:focus,
+#prev-btn:focus {
     outline: none;
-  }
-  .slide-content {
+}
+
+.slide-content {
     position: absolute;
-    bottom: 0px;
+    top: 300px;
     left: 5px;
-    transform: translateY(-50%);
     font-size: 20px;
     color: rgb(0, 0, 0);
-    border:#06fc0e 0px solid;
-    background:rgb(255, 255, 0);
+    border: #06fc0e 0px solid;
+    background: rgb(255, 255, 0);
     padding: 3px 10px 3px 10px;
-  }
+}
 
-  @media (min-width: 768px) {
+.car-details {
+    flex: 1;
+    padding: 5px;
+}
+
+.car-details h2 {
+    margin-top: 0;
+    margin: 0;
+}
+
+.car-details p {
+    margin: 5px 0;
+}
+
+@media (min-width: 768px) {
     .slidesContainer {
-      width: 450px;
-      
+        width: 450px;
+        
     }
 
     .slide {
-        
-        height: 270px;
-        
-    }
-  }
 
-  @media screen and (max-width: 600px) {
+        height: 270px;
+
+    }
+}
+
+@media screen and (max-width: 600px) {
     .slidesContainer {
-      width: 90vw;
-      height: 270px;
-    }
-    .slide {
-        
-        height: 270px;
-        
-    }
-  }
-
-    @media screen and (max-width: 400px) {
-        .slidesContainer {
         width: 90vw;
+        height: 107vw;
+    }
+
+    .slide {
+
+        height: 270px;
+
+    }
+
+    .slide-content {
+        top: 60vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .slidesContainer {
+        width: 90vw;
+        height: 115vw;
+    }
+
+    .slide {
+
+        height: 270px;
+
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .slide-content {
+        top: 59vw;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .slidesContainer {
+        width: 90vw;
+        height: 122vw;
+    }
+
+    .slide {
+
+        height: 270px;
+
+    }
+    .slide-content {
+        top: 60vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .slidesContainer {
+        width: 90vw;
+        height: 125vw;
+    }
+
+    .slide {
+
         height: 260px;
-        }
-        .slide {
-        
-            height: 260px;
-            
-        }
-    }
 
-    @media screen and (max-width: 320px) {
-        .slidesContainer {
+    }
+    .slide-content {
+        top: 64vw;
+    }
+}
+
+@media screen and (max-width: 388px) {
+    .slidesContainer {
         width: 90vw;
-        height: 250px;
-        }
-        .slide {
-        
-            height: 250px;
-            
-        }
+        height: 130vw;
     }
 
-  
+    .slide {
+
+        height: 260px;
+
+    }
+
+    .slide-content {
+        top: 66vw;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .slidesContainer {
+        width: 90vw;
+        height: 135vw;
+    }
+
+    .slide {
+
+        height: 260px;
+
+    }
+
+    .slide-content {
+        top: 70vw;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .slidesContainer {
+        width: 90vw;
+        height: 150vw;
+    }
+
+    .slide {
+
+        height: 260px;
+
+    }
+}
+
+@media screen and (max-width: 322px) {
+    .slidesContainer {
+        width: 90vw;
+        height: 180vw;
+    }
+
+    .slide {
+
+        height: 200px;
+
+    }
+    .slide-content {
+        top: 4px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    
+}

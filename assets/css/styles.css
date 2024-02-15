@@ -15,7 +15,7 @@ html {
   scroll-behavior: smooth;
   display: inline-block;
   width: 100%;
-
+  border:rgb(56, 224, 0) 0px solid;
   margin: 0;
   padding: 0 0 0 0;
 }
@@ -31,9 +31,9 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 20vh;
+  height: 100px;
   background-color: #000000;
-  width: 100%;
+  
   color: yellow;
   text-align: center;
   font-size: 1rem;
@@ -85,18 +85,7 @@ body {
   height: auto;
 }
 
-.car-details {
-  flex: 1;
-  padding: 20px;
-}
 
-.car-details h2 {
-  margin-top: 0;
-}
-
-.car-details p {
-  margin: 5px 0;
-}
 
 button {
   background-color: #007bff;
@@ -151,7 +140,7 @@ button:hover {
   align-items: center;
   position: relative;
   height: 80px;
-  background-color: #000000;
+  background-color: #2c2c2c;
   width: 50vw;
   color: yellow;
   text-align: center;
@@ -180,7 +169,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 100%;
+  
   text-align: left;
   font-size: 1rem;
   line-height: normal;
