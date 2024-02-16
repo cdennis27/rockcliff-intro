@@ -30,9 +30,9 @@ const startSlide = () => {
   slideId = setInterval(() => {
     slideWidth = slides[index].clientWidth;
 
-slide.style.transform = `translateX(${-slideWidth * index}px)`;
+    slide.style.transform = `translateX(${-slideWidth * index}px)`;
 
-console.log("startSlide called");
+    console.log("startSlide called");
 
     moveToNextSlide();
   }, interval);
@@ -62,11 +62,11 @@ const moveToNextSlide = () => {
   console.log(index);
   console.log("slidewidth:");
   console.log("vwidth: " + vwidth);
-  let slideWidth = slides[index].clientWidth;
+  slideWidth = slides[index].clientWidth;
 
-slide.style.transform = `translateX(${-slideWidth * index}px)`;
+  slide.style.transform = `translateX(${-slideWidth * index}px)`;
 
-console.log("movetonextslide");
+  console.log("movetonextslide");
 
   slide.style.transition = '.7s ease-out';
   slide.style.transform = `translateX(${-slideWidth * index}px)`;
