@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
 
-    border: 1px solid #cf03ef;
+    border: 0px solid #cf03ef;
 }
 
 .car-image {
@@ -13,7 +13,7 @@
 
 .slidesContainer {
     display: flex;
-    border: rgb(62, 9, 234) 1px solid;
+    border: rgb(62, 9, 234) 0px solid;
     width: 450px;
     height: 550px;
     overflow: hidden;
