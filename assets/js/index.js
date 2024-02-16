@@ -88,3 +88,4 @@ nextBtn.addEventListener('click', moveToNextSlide);
 prevBtn.addEventListener('click', moveToPreviousSlide);
 
 startSlide();
+moveToNextSlide();
