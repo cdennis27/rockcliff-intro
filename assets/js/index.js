@@ -7,6 +7,8 @@ const interval = 3000;
 let slides = document.querySelectorAll('.slide');
 let index = 1;
 let slideId;
+let vwidth = window.innerWidth;
+
 
 const firstClone = slides[0].cloneNode(true);
 const lastClone = slides[slides.length - 1].cloneNode(true);
@@ -17,7 +19,8 @@ lastClone.id = 'last-clone';
 slide.append(firstClone);
 slide.prepend(lastClone);
 
-const slideWidth = slides[index].clientWidth;
+
+let slideWidth = slides[index].clientWidth;
 
 slide.style.transform = `translateX(${-slideWidth * index}px)`;
 
@@ -25,6 +28,12 @@ console.log(slides);
 
 const startSlide = () => {
   slideId = setInterval(() => {
+    slideWidth = slides[index].clientWidth;
+
+slide.style.transform = `translateX(${-slideWidth * index}px)`;
+
+console.log("startSlide called");
+
     moveToNextSlide();
   }, interval);
 };
@@ -51,7 +60,14 @@ const moveToNextSlide = () => {
   if (index >= slides.length - 1) return;
   index++;
   console.log(index);
-  console.log(slideWidth);
+  console.log("slidewidth:");
+  console.log("vwidth: " + vwidth);
+  let slideWidth = slides[index].clientWidth;
+
+slide.style.transform = `translateX(${-slideWidth * index}px)`;
+
+console.log("movetonextslide");
+
   slide.style.transition = '.7s ease-out';
   slide.style.transform = `translateX(${-slideWidth * index}px)`;
 };
