@@ -8,7 +8,7 @@
 
 .car-image {
     width: 450px;
-    border-bottom: 1px solid #06fc0e;
+    border-bottom: 0px solid #06fc0e;
 }
 
 .slidesContainer {
@@ -22,20 +22,26 @@
 .slides {
     display: flex;
     height: 100%;
-    border: blue 1px solid;
+    border: blue 0px solid;
 
 }
 
 .slide {
-    min-width: 100%;
+    min-height: 350px;
+    height: 350px;
     position: relative;
     border: orange 0px solid;
 
 }
 
+
+
+
+
 .slide img {
-    width: 100%;
-    height: auto;
+    height: 100%;
+    
+    object-fit: cover;
 }
 
 .slide-controls {
@@ -66,7 +72,7 @@
 
 .slide-content {
     position: absolute;
-    top: 300px;
+    top: 315px;
     left: 5px;
     font-size: 20px;
     color: rgb(0, 0, 0);
@@ -90,9 +96,17 @@
 }
 
 @media (min-width: 768px) {
+    
+}
+
+@media screen and (max-width: 520px) {
     .slidesContainer {
-        width: 450px;
-        
+        width: 400px;
+        height: 520px;
+    }
+
+    .slides {
+        height: 100%;
     }
 
     .slide {
@@ -100,12 +114,24 @@
         height: 270px;
 
     }
+
+    .slide img {
+        height: 90%;
+    }
+
+    .slide-content {
+        top: 280px;
+    }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 435px) {
     .slidesContainer {
-        width: 90vw;
-        height: 107vw;
+        width: 370px;
+        height: 460px;
+    }
+
+    .slides {
+        height: 100%;
     }
 
     .slide {
@@ -114,126 +140,119 @@
 
     }
 
+    .slide img {
+        height: 80%;
+    }
+
     .slide-content {
-        top: 60vw;
+        top: 250px;
+    }
+
+    .slide-content p{
+        font-size: 80%;
+    }
+
+    .car-details h2{
+        font-size: 1.2rem;
+    }
+
+    .car-details p{
+        font-size: 80%;
     }
 }
 
-@media screen and (max-width: 500px) {
-    .slidesContainer {
-        width: 90vw;
-        height: 115vw;
-    }
 
-    .slide {
 
-        height: 270px;
 
-    }
-}
 
-@media screen and (max-width: 450px) {
-    .slide-content {
-        top: 59vw;
-    }
-}
-
-@media screen and (max-width: 425px) {
-    .slidesContainer {
-        width: 90vw;
-        height: 122vw;
-    }
-
-    .slide {
-
-        height: 270px;
-
-    }
-    .slide-content {
-        top: 60vw;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .slidesContainer {
-        width: 90vw;
-        height: 125vw;
-    }
-
-    .slide {
-
-        height: 260px;
-
-    }
-    .slide-content {
-        top: 64vw;
-    }
-}
 
 @media screen and (max-width: 388px) {
     .slidesContainer {
-        width: 90vw;
-        height: 130vw;
+        width: 320px;
+        height: 430px;
+    }
+
+    .slides {
+        height: 100%;
     }
 
     .slide {
 
-        height: 260px;
+        height: 270px;
 
+    }
+
+    .slide img {
+        height: 70%;
     }
 
     .slide-content {
-        top: 66vw;
+        top: 215px;
     }
+
+
 }
 
-@media screen and (max-width: 375px) {
+
+
+
+
+@media screen and (max-width: 350px) {
     .slidesContainer {
-        width: 90vw;
-        height: 135vw;
+        width: 290px;
+        height: 410px;
+    }
+
+    .slides {
+        height: 100%;
     }
 
     .slide {
 
-        height: 260px;
+        height: 270px;
 
+    }
+
+    .slide img {
+        height: 63%;
     }
 
     .slide-content {
-        top: 70vw;
+        top: 190px;
     }
+
+    
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 310px) {
     .slidesContainer {
-        width: 90vw;
-        height: 150vw;
+        width: 250px;
+        height: 380px;
+    }
+
+    .slides {
+        height: 100%;
     }
 
     .slide {
 
-        height: 260px;
+        height: 270px;
 
     }
-}
 
-@media screen and (max-width: 322px) {
-    .slidesContainer {
-        width: 90vw;
-        height: 180vw;
+    .slide img {
+        height: 55%;
     }
 
-    .slide {
-
-        height: 200px;
-
-    }
     .slide-content {
-        top: 4px;
+        top: 160px;
+
     }
 
-    p {
-        font-size: 14px;
+    
+
+    .car-details p{
+        font-size: 80%;
     }
 
     
