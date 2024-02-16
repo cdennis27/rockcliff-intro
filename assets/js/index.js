@@ -50,6 +50,8 @@ const moveToNextSlide = () => {
   slides = getSlides();
   if (index >= slides.length - 1) return;
   index++;
+  console.log(index);
+  console.log(slideWidth);
   slide.style.transition = '.7s ease-out';
   slide.style.transform = `translateX(${-slideWidth * index}px)`;
 };
