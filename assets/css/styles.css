@@ -15,7 +15,7 @@ html {
   scroll-behavior: smooth;
   display: inline-block;
   width: 100%;
-  border:rgb(56, 224, 0) 0px solid;
+  border: rgb(56, 224, 0) 0px solid;
   margin: 0;
   padding: 0 0 0 0;
 }
@@ -33,7 +33,7 @@ a {
   position: relative;
   height: 100px;
   background-color: #000000;
-  
+
   color: yellow;
   text-align: center;
   font-size: 1rem;
@@ -87,16 +87,20 @@ body {
 
 
 
-button {
+.view-details {
   background-color: #007bff;
+  position: relative;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 5px 10px 5px 10px;
   border-radius: 5px;
   cursor: pointer;
+  top: 5px;
+  font-size: 1rem;
+  /*box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);*/
 }
 
-button:hover {
+.view-details:hover {
   background-color: #0056b3;
 }
 
@@ -169,7 +173,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   position: relative;
-  
+
   text-align: left;
   font-size: 1rem;
   line-height: normal;
@@ -189,7 +193,7 @@ button:hover {
   position: sticky;
   bottom: 0;
   left: 0;
-  height: 15vh;
+  height: 100px;
   background-color: #000000;
   width: 100%;
   color: yellow;
@@ -202,7 +206,7 @@ button:hover {
 
 .footer a {
 
-  padding: 10px 0 10px 0;
+  padding: 5px 0 5px 0;
 }
 
 .callFooter {
@@ -211,7 +215,10 @@ button:hover {
 
 .address {
   color: white;
+
 }
+
+
 
 .footer a:hover {
   color: orangered;
@@ -239,14 +246,14 @@ button:hover {
 @media screen and (max-width: 1020px) {
 
   .header {
-    height: 70px;
+    height: 60px;
     width: 100%;
-    
+
   }
 
   .header img {
     width: auto;
-    height: 50px;
+    height: 60px;
     padding: 5px;
     object-fit: cover;
   }
@@ -256,7 +263,7 @@ button:hover {
   }
 
   .button {
-    margin: 10px 0 10px 0;
+    margin: 5px 0 5px 0;
     width: 80vw;
     height: 50px;
   }
@@ -269,18 +276,22 @@ button:hover {
 
   .footer {
     padding: 5px 0 5px 0;
-    height: 100px;
+    height: 70px;
     font-size: 80%;
   }
 
+  .footer h3 {
+    padding: 0;
+  }
+
   .footer p {
-    padding: 5px 0 5px 0;
+    padding: 5px 0 0px 0;
 
   }
 
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .header {
     display: flex;
     justify-content: center;
@@ -288,7 +299,7 @@ button:hover {
     flex-direction: row;
     position: relative;
 
-    padding: 10px 20px;
+    padding: 0px 0 0px 0;
     height: 50px;
   }
 
@@ -300,7 +311,57 @@ button:hover {
   }
 
   .container {
-    border:rgb(0, 173, 0) 0px solid;
+    border: rgb(0, 173, 0) 0px solid;
+  }
+
+  .footer a {
+    padding: 0px 0 0px 0;
+  }
+
+  .footer {
+    padding: 5px 0 0px 0;
+    height: 90px;
+  }
+
+}
+
+@media (max-width: 325px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+
+    padding: 0px 0 0px 0;
+    height: 40px;
+  }
+
+  .header img {
+    width: auto;
+    height: 40px;
+    padding: 0px;
+    object-fit: cover;
+  }
+
+  .button {
+    margin: 5px 0 5px 0;
+    width: 80vw;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .container {
+    border: rgb(0, 173, 0) 0px solid;
+  }
+
+  .footer a {
+    padding: 0px 0 0px 0;
+  }
+
+  .footer {
+    padding: 5px 0 0px 0;
+    height: 70px;
   }
 
 }
