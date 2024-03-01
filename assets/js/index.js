@@ -5,7 +5,7 @@ const prevBtn = document.getElementById('prev-btn');
 const interval = 3000;
 
 let slides = document.querySelectorAll('.slide');
-let index = 0;
+let index = 1;
 let slideId;
 let vwidth = window.innerWidth;
 
