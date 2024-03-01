@@ -86,6 +86,6 @@ slideContainer.addEventListener('mouseenter', () => {
 slideContainer.addEventListener('mouseleave', startSlide);
 nextBtn.addEventListener('click', moveToNextSlide);
 prevBtn.addEventListener('click', moveToPreviousSlide);
-moveToPreviousSlide();
+moveToNextSlide();
 startSlide();
 moveToNextSlide();
