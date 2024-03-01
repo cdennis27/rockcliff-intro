@@ -5,7 +5,7 @@ const prevBtn = document.getElementById('prev-btn');
 const interval = 3000;
 
 let slides = document.querySelectorAll('.slide');
-let index = 1;
+let index = 0;
 let slideId;
 let vwidth = window.innerWidth;
 
@@ -33,7 +33,7 @@ const startSlide = () => {
     slide.style.transform = `translateX(${-slideWidth * index}px)`;
 
     console.log("startSlide called");
-console.log("line 36 slideWidth: " + slideWidth);
+    console.log("line 36 slideWidth: " + slideWidth);
     moveToNextSlide();
   }, interval);
 };
@@ -53,17 +53,19 @@ slide.addEventListener('transitionend', () => {
     index = slides.length - 2;
     slide.style.transform = `translateX(${-slideWidth * index}px)`;
   }
+  
+  console.log("transitionend: " + index);
 });
 
 const moveToNextSlide = () => {
   slides = getSlides();
   if (index >= slides.length - 1) return;
   index++;
-  console.log(index);
-  console.log("slidewidth:");
-  console.log("vwidth: " + vwidth);
-  slideWidth = slides[index].clientWidth;
 
+  slideWidth = slides[index].clientWidth;
+  console.log(index);
+  console.log("slidewidth:" + slideWidth);
+  console.log("vwidth: " + vwidth);
   slide.style.transform = `translateX(${-slideWidth * index}px)`;
 
   console.log("movetonextslide");
@@ -79,6 +81,23 @@ const moveToPreviousSlide = () => {
   slide.style.transform = `translateX(${-slideWidth * index}px)`;
 };
 
+const loadSlides = () => {
+  slides = getSlides();
+  if (index >= slides.length - 1) return;
+  index++;
+
+  slideWidth = slides[index].clientWidth;
+  console.log(index);
+  console.log("slidewidth:" + slideWidth);
+  console.log("vwidth: " + vwidth);
+  slide.style.transform = `translateX(${-slideWidth * index}px)`;
+
+  console.log("LOADED SLIDES: " + slides.length);
+
+  slide.style.transition = '.7s ease-out';
+  slide.style.transform = `translateX(${-slideWidth * index}px)`;
+};
+
 slideContainer.addEventListener('mouseenter', () => {
   clearInterval(slideId);
 });
@@ -86,6 +105,9 @@ slideContainer.addEventListener('mouseenter', () => {
 slideContainer.addEventListener('mouseleave', startSlide);
 nextBtn.addEventListener('click', moveToNextSlide);
 prevBtn.addEventListener('click', moveToPreviousSlide);
-moveToNextSlide();
+
+
+loadSlides();
+console.log('firstloaded');
+
 startSlide();
-moveToNextSlide();
