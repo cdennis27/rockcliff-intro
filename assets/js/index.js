@@ -94,8 +94,9 @@ const loadSlides = () => {
 
   console.log("LOADED SLIDES: " + slides.length);
 
-  slide.style.transition = '.7s ease-out';
+  slide.style.transition = '0s ease-out';
   slide.style.transform = `translateX(${-slideWidth * index}px)`;
+  
 };
 
 slideContainer.addEventListener('mouseenter', () => {
@@ -107,6 +108,7 @@ nextBtn.addEventListener('click', moveToNextSlide);
 prevBtn.addEventListener('click', moveToPreviousSlide);
 
 
+loadSlides();
 loadSlides();
 console.log('firstloaded');
 
