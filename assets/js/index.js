@@ -90,7 +90,7 @@ const moveToPreviousSlide = () => {
 
 const loadSlides = () => {
   slides = getSlides();
-  debugger;
+  //debugger;
   index = 3;
   if (index >= slides.length - 1) return;
   index--;
