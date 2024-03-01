@@ -99,12 +99,12 @@ const loadSlides = () => {
   console.log(index);
   console.log("slidewidth:" + slideWidth);
   console.log("vwidth: " + vwidth);
-  slide.style.transition = '1.4s ease-out';
+  slide.style.transition = '0s ease-out';
   slide.style.transform = `translateX(${-slideWidth * index}px)`;
 
   console.log("LOADED SLIDES: " + slides.length);
 index--;
-  slide.style.transition = '1.4s ease-out';
+  slide.style.transition = '0s ease-out';
   slide.style.transform = `translateX(${-slideWidth * index}px)`;
   
 };
