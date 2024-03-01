@@ -21,6 +21,10 @@
 
 .slides {
     display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    
     height: 100%;
     border: blue 0px solid;
 
