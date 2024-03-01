@@ -8,11 +8,16 @@ let slides = document.querySelectorAll('.slide');
 let index = 1;
 let slideId;
 let vwidth = window.innerWidth;
-
+let slideLateral = slides[index].getBoundingClientRect().width;
 
 const firstClone = slides[0].cloneNode(true);
 const lastClone = slides[slides.length - 1].cloneNode(true);
 
+window.addEventListener("resize", function(event) {
+  console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight+' high');
+moveToNextSlide();
+});
+slide.style.transform = `translateX(0px)`;
 firstClone.id = 'first-clone';
 lastClone.id = 'last-clone';
 
@@ -65,8 +70,9 @@ const moveToNextSlide = () => {
   slideWidth = slides[index].clientWidth;
   console.log(index);
   console.log("slidewidth:" + slideWidth);
+  console.log("slideLateral: " + slideLateral);
   console.log("vwidth: " + vwidth);
-  slide.style.transform = `translateX(${-slideWidth * index}px)`;
+  //slide.style.transform = `translateX(${-slideWidth * index}px)`;
 
   console.log("movetonextslide");
 
