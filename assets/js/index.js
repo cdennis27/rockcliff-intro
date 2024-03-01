@@ -90,7 +90,7 @@ const loadSlides = () => {
   console.log(index);
   console.log("slidewidth:" + slideWidth);
   console.log("vwidth: " + vwidth);
-  
+  slide.style.transform = `translateX(${-slideWidth * index}px)`;
 
   console.log("LOADED SLIDES: " + slides.length);
 
