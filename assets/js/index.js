@@ -18,7 +18,7 @@ window.addEventListener("resize", function(event) {
 index = 0;
   moveToNextSlide();
 });
-slide.style.transform = `translateX(0px)`;
+//slide.style.transform = `translateX(0px)`;
 firstClone.id = 'first-clone';
 lastClone.id = 'last-clone';
 
@@ -90,7 +90,7 @@ const moveToPreviousSlide = () => {
 
 const loadSlides = () => {
   slides = getSlides();
-  //debugger;
+  debugger;
   index = 3;
   if (index >= slides.length - 1) return;
   index--;
@@ -99,12 +99,12 @@ const loadSlides = () => {
   console.log(index);
   console.log("slidewidth:" + slideWidth);
   console.log("vwidth: " + vwidth);
-  
+  slide.style.transition = '1.4s ease-out';
   slide.style.transform = `translateX(${-slideWidth * index}px)`;
 
   console.log("LOADED SLIDES: " + slides.length);
 index--;
-  slide.style.transition = '3s ease-out';
+  slide.style.transition = '1.4s ease-out';
   slide.style.transform = `translateX(${-slideWidth * index}px)`;
   
 };

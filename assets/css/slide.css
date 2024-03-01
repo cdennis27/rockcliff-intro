@@ -35,7 +35,7 @@
     height: 350px;
     position: relative;
     border: orange 0px solid;
-
+    padding: 2px;
 }
 
 
@@ -43,7 +43,7 @@
 
 
 .slide img {
-    display: block;
+    
     height: 100%;
     
     object-fit: cover;
