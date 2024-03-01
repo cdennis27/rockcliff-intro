@@ -177,6 +177,7 @@
 
     .slides {
         height: 100%;
+        
     }
 
     .slide {
@@ -187,6 +188,7 @@
 
     .slide img {
         height: 70%;
+        min-width: 100%;
     }
 
     .slide-content {
