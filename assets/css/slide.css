@@ -24,7 +24,7 @@
     flex-direction: row;
     align-items: start;
     justify-content: start;
-    
+    transform: translateX(0);
     height: 100%;
     border: blue 0px solid;
 
