@@ -5,7 +5,7 @@ const prevBtn = document.getElementById('prev-btn');
 const interval = 3000;
 
 let slides = document.querySelectorAll('.slide');
-let index = 3;
+let index = 1;
 let slideId;
 let vwidth = window.innerWidth;
 
@@ -83,6 +83,7 @@ const moveToPreviousSlide = () => {
 
 const loadSlides = () => {
   slides = getSlides();
+  //debugger;
   if (index >= slides.length - 1) return;
   index++;
 
@@ -90,10 +91,11 @@ const loadSlides = () => {
   console.log(index);
   console.log("slidewidth:" + slideWidth);
   console.log("vwidth: " + vwidth);
+  
   slide.style.transform = `translateX(${-slideWidth * index}px)`;
 
   console.log("LOADED SLIDES: " + slides.length);
-
+index--;
   slide.style.transition = '0s ease-out';
   slide.style.transform = `translateX(${-slideWidth * index}px)`;
   
