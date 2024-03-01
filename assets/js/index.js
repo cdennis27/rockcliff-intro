@@ -33,7 +33,7 @@ const startSlide = () => {
     slide.style.transform = `translateX(${-slideWidth * index}px)`;
 
     console.log("startSlide called");
-
+console.log("line 36 slideWidth: " + slideWidth);
     moveToNextSlide();
   }, interval);
 };
@@ -86,6 +86,6 @@ slideContainer.addEventListener('mouseenter', () => {
 slideContainer.addEventListener('mouseleave', startSlide);
 nextBtn.addEventListener('click', moveToNextSlide);
 prevBtn.addEventListener('click', moveToPreviousSlide);
-
+moveToNextSlide();
 startSlide();
 moveToNextSlide();
