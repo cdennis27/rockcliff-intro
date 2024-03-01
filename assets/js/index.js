@@ -15,7 +15,8 @@ const lastClone = slides[slides.length - 1].cloneNode(true);
 
 window.addEventListener("resize", function(event) {
   console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight+' high');
-moveToNextSlide();
+index = 0;
+  moveToNextSlide();
 });
 slide.style.transform = `translateX(0px)`;
 firstClone.id = 'first-clone';
@@ -90,8 +91,9 @@ const moveToPreviousSlide = () => {
 const loadSlides = () => {
   slides = getSlides();
   //debugger;
+  index = 3;
   if (index >= slides.length - 1) return;
-  index++;
+  index--;
 
   slideWidth = slides[index].clientWidth;
   console.log(index);
@@ -102,7 +104,7 @@ const loadSlides = () => {
 
   console.log("LOADED SLIDES: " + slides.length);
 index--;
-  slide.style.transition = '0s ease-out';
+  slide.style.transition = '3s ease-out';
   slide.style.transform = `translateX(${-slideWidth * index}px)`;
   
 };
