@@ -109,7 +109,7 @@ prevBtn.addEventListener('click', moveToPreviousSlide);
 
 
 loadSlides();
-loadSlides();
+
 console.log('firstloaded');
 
 startSlide();
