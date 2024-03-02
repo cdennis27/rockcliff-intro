@@ -18,7 +18,7 @@
 
 .slidesContainer {
     display: flex;
-    border: rgb(62, 9, 234) 1px solid;
+    border: rgb(62, 9, 234) 0px solid;
     width: 450px;
     height: 550px;
     overflow: hidden;
