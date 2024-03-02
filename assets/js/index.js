@@ -7,7 +7,8 @@ const interval = 3000;
 let slides = document.querySelectorAll('.slide');
 let index = 1;
 let slideId;
-let vwidth = window.innerWidth;
+let deviceWidth = window.innerWidth;
+
 let slideLateral = slides[index].getBoundingClientRect().width;
 
 const firstClone = slides[0].cloneNode(true);
@@ -72,7 +73,7 @@ const moveToNextSlide = () => {
   console.log(index);
   console.log("slidewidth:" + slideWidth);
   console.log("slideLateral: " + slideLateral);
-  console.log("vwidth: " + vwidth);
+  console.log("deviceWidth: " + deviceWidth);
   //slide.style.transform = `translateX(${-slideWidth * index}px)`;
 
   console.log("movetonextslide");
@@ -93,12 +94,12 @@ const loadSlides = () => {
   //debugger;
   //index = 3;
   if (index >= slides.length - 1) return;
-  index--;
+  index++;
 
   slideWidth = slides[index].clientWidth;
   console.log(index);
-  console.log("slidewidth:" + slideWidth);
-  console.log("vwidth: " + vwidth);
+  console.log("slideWidth:" + slideWidth);
+  console.log("deviceWidth: " + deviceWidth);
   slide.style.transition = '0s ease-out';
   slide.style.transform = `translateX(${-slideWidth * index}px)`;
 
