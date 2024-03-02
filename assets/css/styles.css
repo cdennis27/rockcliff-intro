@@ -58,32 +58,6 @@ body {
 }
 
 
-.car-card {
-  display: flex;
-  flex-direction: column;
-
-  margin: 5px 20px 5px 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-.car-image {
-  flex: 1;
-  overflow: hidden;
-  border: red 1px solid;
-}
-
-.image-slide {
-  display: flex;
-  width: 300%;
-  /* Set the width to accommodate 3 images */
-}
-
-.image-slide img {
-  width: calc(100% / 3);
-  /* Distribute images evenly */
-  height: auto;
-}
 
 
 
@@ -104,27 +78,7 @@ body {
   background-color: #0056b3;
 }
 
-@keyframes slide {
 
-  33.33%,
-  66.66% {
-    transform: translateX(0);
-  }
-
-  66.66%,
-  33.33% {
-    transform: translateX(-33.33%);
-  }
-
-  100% {
-    transform: translateX(-66.66%);
-  }
-
-}
-
-.image-slide {
-  animation: slide 15s infinite linear alternate;
-}
 
 .container {
   display: flex;
