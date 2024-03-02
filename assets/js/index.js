@@ -1,15 +1,23 @@
+
 const slideContainer = document.querySelector('.container');
 const slide = document.querySelector('.slides');
 const nextBtn = document.getElementById('next-btn');
 const prevBtn = document.getElementById('prev-btn');
 const interval = 3000;
+const getSlides = () => document.querySelectorAll('.slide');
 
 let slides = document.querySelectorAll('.slide');
+
 let index = 1;
+let slideLateral = slides[index].getBoundingClientRect().width;
+console.log("slideLateral: " + slideLateral);
 let slideId;
 let deviceWidth = window.innerWidth;
+let matchResult = window.matchMedia("(max-width: 767px)");
+console.log("matchResult: " + matchResult.matches);
+console.log(matchResult);
 
-let slideLateral = slides[index].getBoundingClientRect().width;
+
 
 const firstClone = slides[0].cloneNode(true);
 const lastClone = slides[slides.length - 1].cloneNode(true);
@@ -45,7 +53,7 @@ const startSlide = () => {
   }, interval);
 };
 
-const getSlides = () => document.querySelectorAll('.slide');
+
 
 slide.addEventListener('transitionend', () => {
   slides = getSlides();
