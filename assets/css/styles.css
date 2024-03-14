@@ -131,9 +131,39 @@ body {
   text-align: left;
   font-size: 1rem;
   line-height: normal;
-  padding: 10px 100px 10px 100px;
+  padding: 25px 100px 10px 100px;
   margin: 0;
   text-indent: 20px;
+
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  position: relative;
+  top: 0px;
+  height: auto;
+  background-color: white;
+  padding: 10px 100px 10px 100px;
+  margin: 0;
+  width: 100%;
+
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  position: relative;
+  top: 0px;
+  height: auto;
+  background-color: white;
+  padding: 10px 100px 10px 120px;
+  margin: 0;
+  width: 100%;
 
 }
 
@@ -223,9 +253,21 @@ body {
   }
 
   .disclamer {
-    padding: 10px 10px 20px 10px;
+    padding: 15px 10px 5px 10px;
 
-    font-size: .7rem;
+    font-size: .8rem;
+  }
+
+  .text {
+    padding: 5px 10px 5px 10px;
+
+    font-size: .9rem;
+  }
+
+  .list {
+    padding: 10px 10px 10px 20px;
+
+    font-size: 1rem;
   }
 
   .footer {
