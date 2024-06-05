@@ -50,6 +50,40 @@ a {
 
 }
 
+.headerBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 0px;
+  height: auto;
+  background-color: rgb(255, 230, 0);
+  color: black;
+  padding: 10px 0 0px 0;
+  margin: 0;
+  width: 100%;
+  
+}
+
+.headerAccent {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 10px 0 10px 0;
+}
+
+.headerBlock h1, .headerBlock h2, .headerBlock p {
+  text-align: center;
+  padding: 10px 20px 10px 20px;
+  width: 100%;
+}
+
+.headerBlock p {
+font-size: 1.5rem;
+padding: 10px 30px 10px 30px;
+}
+
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
