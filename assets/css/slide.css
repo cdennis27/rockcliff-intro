@@ -119,13 +119,14 @@
 
 .slide-content {
     position: absolute;
-    top: 415px;
+    top: 315px;
     left: 5px;
     font-size: 20px;
     color: rgb(0, 0, 0);
     border: #06fc0e 0px solid;
     background: rgb(255, 255, 0);
     padding: 3px 10px 3px 10px;
+    border-radius: 5px;
 }
 
 .car-details {

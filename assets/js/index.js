@@ -14,8 +14,8 @@ console.log("slideLateral: " + slideLateral);
 let slideId;
 let deviceWidth = window.innerWidth;
 let matchResult = window.matchMedia("(max-width: 767px)");
-console.log("matchResult: " + matchResult.matches);
-console.log(matchResult);
+/*console.log("matchResult: " + matchResult.matches);
+console.log(matchResult);*/
 
 
 
@@ -47,8 +47,8 @@ const startSlide = () => {
 
     slide.style.transform = `translateX(${-slideWidth * index}px)`;
 
-    console.log("startSlide called");
-    console.log("line 36 slideWidth: " + slideWidth);
+    /*console.log("startSlide called");
+    console.log("line 36 slideWidth: " + slideWidth);*/
     moveToNextSlide();
   }, interval);
 };
